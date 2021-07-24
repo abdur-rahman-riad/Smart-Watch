@@ -19,6 +19,7 @@ body{
 .logo{
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 .nav-menu ul{
     display: flex;
@@ -44,13 +45,19 @@ body{
     width: 90%;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr) 60px;
+    grid-template-columns: repeat(2, 1fr) 35px;
     align-items: center;
     justify-content: center;
 }
 .content-info h1{
     font-size: 3.5em;
     color: orangered;
+}
+.content-photo{
+    transition: transform 0.3s ease-in-out;
+}
+.content-photo:hover{
+    transform: scale(0.8);
 }
 .content-icon{
     display: flex;
@@ -60,8 +67,13 @@ body{
 }
 .content-icon .fab{
     font-size: 2em;
-    color: crimson;
+    color: teal;
     margin: 3px 0;
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+}
+.content-icon .fab:hover{
+    color: crimson;
 }
 .btn-buy{
     background-color: crimson;
@@ -70,6 +82,11 @@ body{
     padding: 8px 18px;
     border-radius: 5px;
     font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+.btn-buy:hover{
+    background-color: teal;
 }
 .btn-more{
     background-color: teal;
@@ -78,6 +95,11 @@ body{
     padding: 8px 18px;
     border-radius: 5px;
     font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+.btn-more:hover{
+    background-color: crimson;
 }
 
 /* Footer Design */
