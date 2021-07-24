@@ -1,12 +1,10 @@
-*{
-    font-family: 'Volkhov', serif;
-}
 body{
     background-color: #FFE4DB;
+    font-family: 'Volkhov', serif;
 }
-.main-container{
+.full-container{
     width: 90%;
-    margin:35px auto;
+    margin:25px auto;
     padding: 18px;
     background-color: white;
     border-radius: 10px;
@@ -39,4 +37,51 @@ body{
 .nav-menu ul li a:hover{
     background-color: teal;
     color: white;
+}
+
+/* Main Content */
+.main-content{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 60px;
+    align-items: center;
+    justify-content: center;
+}
+.content-info h1{
+    font-size: 3.5em;
+    color: orangered;
+}
+.content-icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.content-icon .fab{
+    font-size: 2em;
+    color: crimson;
+    margin: 3px 0;
+}
+.btn-buy{
+    background-color: crimson;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.btn-more{
+    background-color: teal;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Footer Design */
+footer{
+    text-align: center;
+    color: gray;
 }
