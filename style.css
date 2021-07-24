@@ -5,7 +5,7 @@ body{
 .full-container{
     width: 90%;
     margin:25px auto;
-    padding: 18px;
+    padding: 18px 25px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 1px 1px 5px #dad9d9;
@@ -42,8 +42,6 @@ body{
 
 /* Main Content */
 .main-content{
-    width: 90%;
-    margin: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr) 35px;
     align-items: center;
@@ -53,10 +51,14 @@ body{
     font-size: 3.5em;
     color: orangered;
 }
-.content-photo{
+.content-photo img{
     transition: transform 0.3s ease-in-out;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.content-photo:hover{
+.content-photo img:hover{
     transform: scale(0.8);
 }
 .content-icon{
@@ -106,4 +108,61 @@ body{
 footer{
     text-align: center;
     color: gray;
+}
+
+/* Responsive For Mobile */
+@media only screen and (max-width: 767px) {
+    .full-container{
+        width: 80%;
+    }
+    .header-content{
+        flex-direction: column;
+    }
+    .nav-menu ul{
+        display: none;
+    }
+    .main-content{
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .content-info{
+        text-align: center;
+    }
+    .content-info h1{
+        font-size: 1.5em;
+    }
+    .content-photo img{
+        width: 80%;
+        margin: 20px auto;
+    }
+    .content-icon{
+        flex-direction: row;
+    }
+    .content-icon .fab{
+        margin: 3px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .logo h2{
+        font-size: 1.5em;
+    }
+    .nav-menu ul li a{
+        padding: 5px 8px;
+        margin: 0 2px;
+    }
+    .main-content{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .content-info h1{
+        font-size: 2em;
+    }
+    .content-icon{
+        flex-direction: row;
+        margin-top: 25px;
+        margin-left: 280px;
+    }
+    .content-icon .fab{
+        margin: 3px;
+    }
 }
